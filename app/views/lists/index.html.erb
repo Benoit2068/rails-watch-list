@@ -1,4 +1,5 @@
-<%= @lists.each do |list| %>
-<%= @list.name, label: "New List Name" %>
-<%= list_to "view détails", list_path(list) %>
+<% @lists.each do |list| %>
+<%= list.name %>
+<%= link_to "view détails", list_path(list) %>
 <% end %>
+<%= link_to "add new list", new_list_path %>
