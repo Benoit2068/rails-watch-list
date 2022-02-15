@@ -1,6 +1,10 @@
 class ListsController < ApplicationController
   before_action :find_list, only:[:show]
 
+  # def index
+  #   @lists = List.all
+  # end
+
   def index
     @lists = List.all
   end
