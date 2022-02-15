@@ -1,2 +1,6 @@
 <h1><%= @list.name %></h1>
+<% if @list.photo.attached? %>
+<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <%= link_to "add bookmark",  new_list_bookmark_path(@list) %>
+<%= link_to "return to List", root_path %>
