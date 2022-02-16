@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :find_list, only:[:show]
+  before_action :find_list, only:[:show, :destroy]
 
   # def index
   #   @lists = List.all
@@ -23,6 +23,11 @@ class ListsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @list.destroy
+    redirect_to root_path
   end
 
 
